@@ -11,7 +11,7 @@ if __name__ == '__main__':
     counter = 0
     while True:
         counter += 1
-        message_body = f'Привет, Разработчик! {counter}'
+        message_body = f'Привет, тебе письмо! {counter}'
         # exchange не указываем, а значит будет использоваться Default Exchange,
         # сообщение будет отправлено в очередь с именем равным routing_key
         channel.basic_publish(exchange='', routing_key='hello_default', body=message_body)
